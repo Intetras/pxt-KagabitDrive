@@ -2,7 +2,7 @@
 //% groups=['テスト1', 'テスト2']
 namespace kagabitdrive {
 
-    //% groups='テスト1'
+    //% group='テスト1'
     //% blockId=aaaaa
     //% block="aaa"
     export function aaa(){ 
