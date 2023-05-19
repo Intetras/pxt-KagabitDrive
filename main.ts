@@ -4,6 +4,8 @@ namespace kagabitdrive {
 
     //% blockId=aaaaa
     //% block="aaa"
-    export function aaa(): void { }
+    export function aaa(){ 
+        
+    }
 
 }
