@@ -3,11 +3,19 @@
 namespace kagabitdrive {
 
     //% group='テスト1'
-    //% blockId=aaaaa
-    //% block="aaa"
-    export function aaa(){ 
+    //% blockId=test1
+    //% block="テスト1"
+    export function test1(){ 
         
         basic.showIcon(IconNames.Heart)
+    }
+
+    //% group='テスト2'
+    //% blockId=test2
+    //% block="テスト2"
+    export function test2() {
+
+        basic.showIcon(IconNames.SmallHeart)
     }
 
 }
