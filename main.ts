@@ -6,6 +6,7 @@ namespace kagabitdrive {
     //% block="aaa"
     export function aaa(){ 
         
+        basic.showIcon(IconNames.Heart)
     }
 
 }
