@@ -1,5 +1,5 @@
 {
-    "name": "題名未設定",
+    "name": "pxt-KagabitDrive",
     "description": "",
     "dependencies": {
         "core": "*",
