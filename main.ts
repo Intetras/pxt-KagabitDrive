@@ -12,10 +12,9 @@ namespace kagabitdrive {
 
     //% group='テスト2'
     //% blockId=test2
-    //% block="テスト2"
-    export function test2() {
-
-        basic.showIcon(IconNames.SmallHeart)
+    //% block="テスト2 |number $x"
+    export function test2(x:number = 100):void {
+        basic.showNumber(x)
     }
 
 }
