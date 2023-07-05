@@ -20,7 +20,7 @@ namespace kagabitdrive {
 
     //% group="ロボットカー制御"
     //% blockId="double_DCmotorAnalog_time"
-    //% block="モーター制御 Lモーターの強さ %powerL Rモーターの強さ %powerR 続ける時間(秒) %msec"
+    //% block="Lモーターの強さ %powerL Rモーターの強さ %powerR で %msec　秒動く"
     //% powerR.min=-1023 powerR.max=1023
     //% powerL.min=-1023 powerL.max=1023
     //% msec.min=0
