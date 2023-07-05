@@ -1,4 +1,3 @@
-//% weight=30 icon="\uf1b9" color=#000080 block="KAGA:bit-Drive"
 namespace kagabitdrive {
 
     export enum direction {
@@ -19,18 +18,8 @@ namespace kagabitdrive {
     let nowBrake = brakeValue.Off
     DoubleMotor(0, 0);
 
-    //% group="DCモーター"
-    //% blockId=double_DCmotorAnalog_time
-    //% block=block="モーター制御 Lモーター %powerL Rモーター %powerR 時間 %msec"
-    //% powerR.min=-1023 powerR.max=1023
-    //% powerL.min=-1023 powerL.max=1023
-    //% msec.min=0
-    export function DoubleMotorTime(powerL: number, powerR: number,msec:number) {
+    
 
-        LmotorA(powerL)
-        RmotorA(powerR)
-
-    }
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
     //% block="モーター制御 Rモーター%powerR"
@@ -110,6 +99,19 @@ namespace kagabitdrive {
 
     }
 
+    //% group="DCモーター"
+    //% blockId=double_DCmotorAnalog_time
+    //% block=block="モーター制御 Lモーター %powerL Rモーター %powerR 時間 %msec"
+    //% powerR.min=-1023 powerR.max=1023
+    //% powerL.min=-1023 powerL.max=1023
+    //% msec.min=0
+    export function DoubleMotorTime(powerL: number, powerR: number, msec: number) {
+
+        LmotorA(powerL)
+        RmotorA(powerR)
+
+    }
+    
     //% group="DCモーター"
     //% blockId="Set_brake"
     //% block="停まり方 %brake"
