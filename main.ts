@@ -32,6 +32,8 @@ namespace kagabitdrive {
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
+        LmotorA(0)
+        RmotorA(0)
     }
 
     //% group="ロボットカー制御"
