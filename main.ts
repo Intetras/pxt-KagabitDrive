@@ -20,15 +20,16 @@ namespace kagabitdrive {
 
     //% group="ロボットカー制御"
     //% blockId="double_DCmotorAnalog_time"
-    //% block="モーター制御 Lモーター %powerL Rモーター %powerR 時間(ミリ秒) %msec"
+    //% block="モーター制御 Lモーターの強さ %powerL Rモーターの強さ %powerR 続ける時間(秒) %msec"
     //% powerR.min=-1023 powerR.max=1023
     //% powerL.min=-1023 powerL.max=1023
     //% msec.min=0
-    export function DoubleMotorTime(powerL: number, powerR: number, msec: number) {
+    export function DoubleMotorTime(powerL: number, powerR: number, sec: number) {
 
-        if (msec < 0) {
-            msec = 0
+        if (sec < 0) {
+            sec = 0
         }
+        let msec = sec * 1000
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
@@ -49,6 +50,12 @@ namespace kagabitdrive {
     //% block="モーター制御 Rモーター%powerR"
     //% powerR.min=-1023 powerR.max=1023
     export function RmotorA(powerR: number) {
+
+        if (powerR > 1023){
+            powerR = 1023
+        } else if (powerR < -1023){
+            powerR = -1023
+        }
 
         if (powerR > 0) {
             pins.digitalWritePin(DigitalPin.P15, direction.Forward);
@@ -83,6 +90,12 @@ namespace kagabitdrive {
     //% block="モーター制御 Lモーター%powerL"
     //% powerL.min=-1023 powerL.max=1023
     export function LmotorA(powerL: number) {
+
+        if (powerL > 1023) {
+            powerL = 1023
+        } else if (powerL < -1023) {
+            powerL = -1023
+        }
 
         if (powerL > 0) {
             pins.digitalWritePin(DigitalPin.P13, direction.Forward);
