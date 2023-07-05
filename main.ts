@@ -100,8 +100,8 @@ namespace kagabitdrive {
     }
 
     //% group="DCモーター"
-    //% blockId=double_DCmotorAnalog_time
-    //% block=block="モーター制御 Lモーター %powerL Rモーター %powerR 時間 %msec"
+    //% blockId="double_DCmotorAnalog_time"
+    //% block="モーター制御 Lモーター %powerL Rモーター %powerR 時間 %msec"
     //% powerR.min=-1023 powerR.max=1023
     //% powerL.min=-1023 powerL.max=1023
     //% msec.min=0
