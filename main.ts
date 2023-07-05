@@ -32,6 +32,12 @@ namespace kagabitdrive {
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
+    }
+
+    //% group="ロボットカー制御"
+    //% blockId="double_DCmotorAnalog_stop"
+    //% block="モーター制御 停止"
+    export function DoubleMotorStop(){
         LmotorA(0)
         RmotorA(0)
     }
