@@ -135,17 +135,6 @@ namespace kagabitdrive {
         RmotorA(powerR)
 
     }
-
-    //% group="DCモーター"
-    //% blockId="Sleep_sec"
-    //% block="%sec 秒動く"
-    export function sleepSec(sec:number){
-        if(sec<0){
-            sec=0
-        }
-        let msec = sec * 1000
-        basic.pause(msec)
-    }
     
     //% group="DCモーター"
     //% blockId="Set_brake"
