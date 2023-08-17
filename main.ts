@@ -30,14 +30,35 @@ namespace kagabitdrive {
             sec = 0
         }
         let msec = sec * 1000
-        for(let i=6;i>1;i--){
-            LmotorA(powerL/i)
-            RmotorA(powerR/i)
-            basic.pause(20)
-        }
+
+        LmotorA(powerL*0.7)
+        RmotorA(powerR*0.7)
+        basic.pause(20)
+
+        LmotorA(powerL * 0.8)
+        RmotorA(powerR * 0.8)
+        basic.pause(20)
+
+        LmotorA(powerL * 0.9)
+        RmotorA(powerR * 0.9)
+        basic.pause(20)
+
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
+
+        LmotorA(powerL * 0.9)
+        RmotorA(powerR * 0.9)
+        basic.pause(20)
+
+        LmotorA(powerL * 0.8)
+        RmotorA(powerR * 0.8)
+        basic.pause(20)
+
+        LmotorA(powerL * 0.7)
+        RmotorA(powerR * 0.7)
+        basic.pause(20)
+
         LmotorA(0)
         RmotorA(0)
     }
