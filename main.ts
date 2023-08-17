@@ -30,7 +30,7 @@ namespace kagabitdrive {
             sec = 0
         }
         let msec = sec * 1000
-        for(let i=0;i<5;i++){
+        for(let i=6;i>1;i--){
             LmotorA(powerL/i)
             RmotorA(powerR/i)
             basic.pause(10)
