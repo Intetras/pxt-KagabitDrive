@@ -33,7 +33,7 @@ namespace kagabitdrive {
         for(let i=6;i>1;i--){
             LmotorA(powerL/i)
             RmotorA(powerR/i)
-            basic.pause(10)
+            basic.pause(1000)
         }
         LmotorA(powerL)
         RmotorA(powerR)
