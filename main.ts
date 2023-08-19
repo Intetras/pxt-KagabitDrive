@@ -186,4 +186,15 @@ namespace kagabitdrive {
         pins.servoWritePin(AnalogPin.P7, angle)
     }
 
+    //% group="Groveラインファインダ"
+    //% blockId=Line_black block="黒色"
+    export function isBlack():number{
+        return 1;
+    }
+
+    //% group="Groveラインファインダ"
+    //% blockId=Line_black block="白色"
+    export function isWhite(): number {
+        return 0;
+    }
 }
