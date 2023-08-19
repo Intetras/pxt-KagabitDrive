@@ -193,7 +193,7 @@ namespace kagabitdrive {
     }
 
     //% group="Groveラインファインダ"
-    //% blockId=Line_black block="白色"
+    //% blockId=Line_White block="白色"
     export function isWhite(): number {
         return 0;
     }
