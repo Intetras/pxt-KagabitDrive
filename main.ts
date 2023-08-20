@@ -153,7 +153,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId="Double_DCmotorAnalog"
-    //% block="Lモーターの強さ %powerL Rモーターの強さ %powerR"
+    //% block="モーターの強さ L %powerL R %powerR"
     //% powerL.min=-1023 powerL.max=1023
     //% powerR.min=-1023 powerR.max=1023
     export function DoubleMotor(powerL: number, powerR: number) {
