@@ -20,7 +20,7 @@ namespace kagabitdrive {
 
     //% group="ロボットカー制御"
     //% blockId="sleep_sec"
-    //% block="%msec秒動く"
+    //% block="動く %msec 秒"
     //% msec.min=0
     export function SleepSec(sec: number){
         let msec = sec * 1000
