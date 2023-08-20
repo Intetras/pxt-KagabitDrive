@@ -65,14 +65,6 @@ namespace kagabitdrive {
     }
 
     //% group="DCモーター"
-    //% blockId="double_DCmotorAnalog_stop"
-    //% block="両方のモーター停止"
-    export function DoubleMotorStop(){
-        LmotorA(0)
-        RmotorA(0)
-    }
-
-    //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
     //% block="モーターの強さ R %powerR"
     //% powerR.min=-1023 powerR.max=1023
