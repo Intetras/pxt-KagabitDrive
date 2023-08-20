@@ -18,14 +18,7 @@ namespace kagabitdrive {
     let nowBrake = brakeValue.Off
     DoubleMotor(0, 0);
 
-    //% group="ロボットカー制御"
-    //% blockId="sleep_sec"
-    //% block="動く %msec 秒"
-    //% msec.min=0
-    export function SleepSec(sec: number){
-        let msec = sec * 1000
-        basic.pause(msec)
-    }
+
 
 
     //% group="ロボットカー制御"
@@ -72,6 +65,15 @@ namespace kagabitdrive {
         LmotorA(0)
         RmotorA(0)
         basic.pause(20)
+    }
+
+    //% group="DCモーター"
+    //% blockId="sleep_sec"
+    //% block="動く %msec 秒"
+    //% msec.min=0
+    export function SleepSec(sec: number) {
+        let msec = sec * 1000
+        basic.pause(msec)
     }
 
     //% group="DCモーター"
