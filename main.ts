@@ -66,7 +66,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
-    //% block="モーターの強さ R %powerR L そのまま"
+    //% block="モーターの強さ R %powerR"
     //% powerR.min=-1023 powerR.max=1023
     export function RmotorA(powerR: number) {
 
@@ -106,7 +106,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId=L_DCmotorAnalog
-    //% block="モーターの強さ R そのまま L %powerL"
+    //% block="モーターの強さ L %powerL"
     //% powerL.min=-1023 powerL.max=1023
     export function LmotorA(powerL: number) {
 
@@ -153,14 +153,6 @@ namespace kagabitdrive {
         LmotorA(powerL)
         RmotorA(powerR)
 
-    }
-    
-    //% group="DCモーター"
-    //% blockId="Set_brake"
-    //% block="停まり方 %brake"
-    export function setBrake(brake: brakeValue) {
-        nowBrake = brake;
-        //basic.showNumber(nowBrake)
     }
 
     //% group="サーボモーター"
