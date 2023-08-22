@@ -56,23 +56,23 @@ namespace kagabitdrive {
         RmotorA(powerR)
         basic.pause(msec)
 
-        LmotorA(powerL * 0.94)
+        LmotorA(powerL * 0.92)
         RmotorA(powerR * 0.95)
         basic.pause(40)
 
-        LmotorA(powerL * 0.89)
+        LmotorA(powerL * 0.87)
         RmotorA(powerR * 0.90)
         basic.pause(40)
 
-        LmotorA(powerL * 0.84)
+        LmotorA(powerL * 0.82)
         RmotorA(powerR * 0.85)
         basic.pause(40)
 
-        LmotorA(powerL * 0.79)
+        LmotorA(powerL * 0.77)
         RmotorA(powerR * 0.80)
         basic.pause(40)
 
-        LmotorA(powerL * 0.74)
+        LmotorA(powerL * 0.72)
         RmotorA(powerR * 0.75)
         basic.pause(40)
 
