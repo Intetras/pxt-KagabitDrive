@@ -19,7 +19,59 @@ namespace kagabitdrive {
     DoubleMotor(0, 0);
 
 
+    //% group="ロボットカー制御"
+    //% blockId="double_DCmotorAnalog_time2"
+    //% block="モーターの強さ2 L %powerL R %powerR で %msec 秒動く"
+    //% powerR.min=-1023 powerR.max=1023
+    //% powerL.min=-1023 powerL.max=1023
+    //% msec.min=0
+    export function DoubleMotorTime2(powerL: number, powerR: number, sec: number) {
 
+        if (sec < 0) {
+            sec = 0
+        }
+        let msec = sec * 1000
+
+        LmotorA(powerL * 0.8)
+        RmotorA(powerR * 0.8)
+        basic.pause(40)
+
+        LmotorA(powerL * 0.85)
+        RmotorA(powerR * 0.85)
+        basic.pause(40)
+
+        LmotorA(powerL * 0.9)
+        RmotorA(powerR * 0.9)
+        basic.pause(40)
+
+        LmotorA(powerL * 0.95)
+        RmotorA(powerR * 0.95)
+        basic.pause(40)
+
+        LmotorA(powerL)
+        RmotorA(powerR)
+        basic.pause(msec)
+
+        LmotorA(powerL * 0.95)
+        RmotorA(powerR * 0.95)
+        basic.pause(40)
+
+        LmotorA(powerL * 0.9)
+        RmotorA(powerR * 0.9)
+        basic.pause(40)
+
+        LmotorA(powerL * 0.85)
+        RmotorA(powerR * 0.85)
+        basic.pause(40)
+
+        LmotorA(powerL * 0.8)
+        RmotorA(powerR * 0.8)
+        basic.pause(40)
+
+        LmotorA(0)
+        RmotorA(0)
+        basic.pause(40)
+    }
 
     //% group="ロボットカー制御"
     //% blockId="double_DCmotorAnalog_time"
