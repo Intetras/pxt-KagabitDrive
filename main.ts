@@ -23,8 +23,8 @@ namespace kagabitdrive {
     //% group="ロボットカー制御"
     //% blockId="set_brakePower"
     //% block="停まるときの強さ L %pL R %R"
-    //% powerR.min=-1023 powerR.max=1023
-    //% powerL.min=-1023 powerL.max=1023
+    //% pR.min=-1023 pR.max=1023
+    //% pL.min=-1023 pL.max=1023
     export function setBrakePower(pL:number,pR:number){
         brakePower[0]=pL;
         brakePower[1]=pR;
