@@ -16,7 +16,19 @@ namespace kagabitdrive {
 
     let nowPower = [0, 0];
     let nowBrake = brakeValue.Off
+
+    let brakePower = [0,0];
     DoubleMotor(0, 0);
+
+    //% group="ロボットカー制御"
+    //% blockId="set_brakePower"
+    //% block="停まるときの強さ L %pL R %R"
+    //% powerR.min=-1023 powerR.max=1023
+    //% powerL.min=-1023 powerL.max=1023
+    export function setBrakePower(pL:number,pR:number){
+        brakePower[0]=pL;
+        brakePower[1]=pR;
+    }
 
 
     //% group="ロボットカー制御"
@@ -32,53 +44,23 @@ namespace kagabitdrive {
         }
         let msec = sec * 1000
 
-        LmotorA(powerL * 0.75)
-        RmotorA(powerR * 0.75)
-        basic.pause(40)
-        
-        LmotorA(powerL * 0.80)
-        RmotorA(powerR * 0.80)
-        basic.pause(40)
-
-        LmotorA(powerL * 0.85)
-        RmotorA(powerR * 0.85)
-        basic.pause(40)
-
-        LmotorA(powerL * 0.90)
-        RmotorA(powerR * 0.90)
-        basic.pause(40)
-
-        LmotorA(powerL * 0.95)
-        RmotorA(powerR * 0.95)
-        basic.pause(40)
+        for (let i = 0.5; i < 1; i = i + 0.1) {
+            LmotorA(i * powerL)
+            RmotorA(i * powerR)
+            basic.pause(40)
+        }
 
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
 
-        LmotorA(powerL * 0)
-        RmotorA(powerR * 0.95)
-        basic.pause(40)
 
-        LmotorA(powerL * 0)
-        RmotorA(powerR * 0.90)
-        basic.pause(40)
-
-        LmotorA(powerL * 0)
-        RmotorA(powerR * 0.85)
-        basic.pause(40)
-
-        LmotorA(powerL * 0)
-        RmotorA(powerR * 0.80)
-        basic.pause(40)
-
-        LmotorA(powerL * 0)
-        RmotorA(powerR * 0.75)
-        basic.pause(40)
-
-        LmotorA(0)
-        RmotorA(0)
-        basic.pause(40)
+        for(let i=0.9;i>0.4;i=i-0.1){
+            LmotorA(i * brakePower[0])
+            RmotorA(i * brakePower[1])
+            basic.pause(40)
+        }
+        
     }
 
     //% group="ロボットカー制御"
