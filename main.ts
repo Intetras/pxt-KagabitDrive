@@ -30,7 +30,6 @@ namespace kagabitdrive {
         brakePower[1]=pR;
     }
 
-
     //% group="ロボットカー制御"
     //% blockId="double_DCmotorAnalog_time2"
     //% block="モーターの強さ2 L %powerL R %powerR で %msec 秒動く"
@@ -42,25 +41,13 @@ namespace kagabitdrive {
         if (sec < 0) {
             sec = 0
         }
-        let msec = sec * 1000
 
-        for (let i = 0.5; i < 1; i = i + 0.1) {
-            LmotorA(i * powerL)
-            RmotorA(i * powerR)
-            basic.pause(40)
-        }
+        let msec = sec * 1000
 
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
 
-
-        for(let i=0.9;i>0.4;i=i-0.1){
-            LmotorA(i * brakePower[0])
-            RmotorA(i * brakePower[1])
-            basic.pause(40)
-        }
-        
         LmotorA(0)
         RmotorA(0)
 
