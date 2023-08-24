@@ -48,15 +48,8 @@ namespace kagabitdrive {
         RmotorA(powerR)
         basic.pause(msec)
 
-        for (let i = 0.9; i > 0.4; i = i - 0.1) {
-            LmotorA(i * brakePower[0])
-            RmotorA(i * brakePower[1])
-            basic.pause(40)
-        }
-        
         LmotorA(0)
         RmotorA(0)
-
 
     }
 
