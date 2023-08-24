@@ -44,6 +44,14 @@ namespace kagabitdrive {
 
         let msec = sec * 1000
 
+        for (let i = 1; i < 10; i++) {
+
+            LmotorA(i * powerL)
+            RmotorA(i * powerR)
+            basic.pause(40)
+
+        }
+
         LmotorA(powerL)
         RmotorA(powerR)
         basic.pause(msec)
