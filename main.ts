@@ -61,6 +61,9 @@ namespace kagabitdrive {
             basic.pause(40)
         }
         
+        LmotorA(0)
+        RmotorA(0)
+
     }
 
     //% group="ロボットカー制御"
@@ -74,7 +77,7 @@ namespace kagabitdrive {
         if (sec < 0) {
             sec = 0
         }
-        let msec = sec * 1000
+        let msec2 = sec * 1000
 
         LmotorA(powerL*0.7)
         RmotorA(powerR*0.7)
@@ -90,7 +93,7 @@ namespace kagabitdrive {
 
         LmotorA(powerL)
         RmotorA(powerR)
-        basic.pause(msec)
+        basic.pause(msec2)
 
         LmotorA(powerL * 0.9)
         RmotorA(powerR * 0.9)
@@ -114,8 +117,8 @@ namespace kagabitdrive {
     //% block="動く %msec 秒"
     //% msec.min=0
     export function SleepSec(sec: number) {
-        let msec = sec * 1000
-        basic.pause(msec)
+        let msec3 = sec * 1000
+        basic.pause(msec3)
     }
 
     //% group="DCモーター"
