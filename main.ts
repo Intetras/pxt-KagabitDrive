@@ -48,8 +48,6 @@ namespace kagabitdrive {
         RmotorA(powerR)
         basic.pause(msec)
 
-        LmotorA(0)
-        RmotorA(0)
 
     }
 
