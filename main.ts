@@ -33,6 +33,31 @@ namespace kagabitdrive {
         DoubleMotor(0,0);
     }
 
+    //% group="DJ_ロボットカー制御"
+    //% blockId="dj_Double_DCmotorAnalog"
+    //% block="モーターの強さ L %powerL R %powerR"
+    //% powerL.min=-1023 powerL.max=1023
+    //% powerR.min=-1023 powerR.max=1023
+    export function djDoubleMotor(powerL: number, powerR: number) {
+
+        LmotorA(powerL * 0.7);
+        RmotorA(powerR * 0.7);
+        basic.pause(20)
+
+        LmotorA(powerL * 0.8);
+        RmotorA(powerR * 0.8);
+        basic.pause(20);
+
+        LmotorA(powerL * 0.9);
+        RmotorA(powerR * 0.9);
+        basic.pause(20);
+        
+        LmotorA(powerL);
+        RmotorA(powerR);
+
+    }
+
+
     //% group="ロボットカー制御"
     //% blockId="set_brakePower"
     //% block="停まるときの強さ L %pL R %R"
