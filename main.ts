@@ -20,6 +20,19 @@ namespace kagabitdrive {
     let brakePower = [0,0];
     DoubleMotor(0, 0);
 
+    //% group="DJ_ロボットカー制御"
+    //% blockId="dj_stop"
+    //% block="DJ_直進後の停止 L %powerL R %powerR"
+    //% pR.min=-102 pR.max=102
+    //% pL.min=-102 pL.max=102
+    export function djStop(powerL: number, powerR:number){
+        for(let i=0;i<10;i++){
+            DoubleMotor((10 - i) * powerL,(10-i)*powerR);
+            basic.pause(50);
+        }
+        DoubleMotor(0,0);
+    }
+
     //% group="ロボットカー制御"
     //% blockId="set_brakePower"
     //% block="停まるときの強さ L %pL R %R"
