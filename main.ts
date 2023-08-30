@@ -23,8 +23,8 @@ namespace kagabitdrive {
     //% group="DJ_ロボットカー制御"
     //% blockId="dj_stop"
     //% block="DJ_直進後の停止 L %powerL R %powerR"
-    //% pR.min=-102 pR.max=102
-    //% pL.min=-102 pL.max=102
+    //% powerR.min=-102 powerR.max=102
+    //% powerL.min=-102 powerL.max=102
     export function djStop(powerL: number, powerR:number){
         for(let i=0;i<10;i++){
             DoubleMotor((10 - i) * powerL,(10-i)*powerR);
