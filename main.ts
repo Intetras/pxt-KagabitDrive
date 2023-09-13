@@ -7,15 +7,7 @@ namespace kagabitdrive {
         Back = 0
     }
 
-    export enum brakeValue {
-        //% block="急ブレーキ"
-        On = 1,
-        //% block="ゆっくりブレーキ"
-        Off = 0
-    }
-
     let nowPower = [0, 0];
-    let nowBrake = brakeValue.Off
 
     let brakePower = [0,0];
     DoubleMotor(0, 0);
@@ -181,19 +173,6 @@ namespace kagabitdrive {
             pins.digitalWritePin(DigitalPin.P15, direction.Back);
             pins.analogWritePin(AnalogPin.P16, Math.abs(powerR));
         } else {
-            //停止
-            if (nowBrake == brakeValue.On) {
-                //ブレーキ処理Onの場合
-                if (nowPower[1] > 0) {
-                    pins.digitalWritePin(DigitalPin.P15, direction.Back);
-                    pins.analogWritePin(AnalogPin.P16, Math.abs(nowPower[1]));
-                    basic.pause(30);
-                } else if (nowPower[1] < 0) {
-                    pins.digitalWritePin(DigitalPin.P15, direction.Forward);
-                    pins.analogWritePin(AnalogPin.P16, Math.abs(nowPower[1]));
-                    basic.pause(30);
-                }
-            }
 
             pins.analogWritePin(AnalogPin.P16, 0);
 
@@ -221,18 +200,7 @@ namespace kagabitdrive {
             pins.digitalWritePin(DigitalPin.P13, direction.Back);
             pins.analogWritePin(AnalogPin.P14, Math.abs(powerL));
         } else {
-            //停止
-            if (nowBrake == brakeValue.On) {
-                if (nowPower[0] > 0) {
-                    pins.digitalWritePin(DigitalPin.P13, direction.Back);
-                    pins.analogWritePin(AnalogPin.P14, Math.abs(nowPower[0]));
-                    basic.pause(30);
-                } else if (nowPower[0] < 0) {
-                    pins.digitalWritePin(DigitalPin.P13, direction.Forward);
-                    pins.analogWritePin(AnalogPin.P14, Math.abs(nowPower[0]));
-                    basic.pause(30);
-                }
-            }
+            
             pins.analogWritePin(AnalogPin.P14, 0);
 
         }
