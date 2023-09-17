@@ -7,9 +7,7 @@ namespace kagabitdrive {
         Back = 0
     }
 
-    let nowPower = [0, 0];
-
-    let brakePower = [0,0];
+    
     DoubleMotor(0, 0);
 
     //% group="ロボットカー制御"
@@ -90,7 +88,7 @@ namespace kagabitdrive {
             pins.analogWritePin(AnalogPin.P16, 0);
 
         }
-        nowPower[1] = powerR;
+        
 
     }
 
@@ -117,8 +115,6 @@ namespace kagabitdrive {
             pins.analogWritePin(AnalogPin.P14, 0);
 
         }
-
-        nowPower[0] = powerL;
 
     }
 
@@ -150,15 +146,4 @@ namespace kagabitdrive {
         pins.servoWritePin(AnalogPin.P7, angle)
     }
 
-    //% group="Groveラインファインダ"
-    //% blockId=Line_black block="黒色"
-    export function isBlack():number{
-        return 1;
-    }
-
-    //% group="Groveラインファインダ"
-    //% blockId=Line_White block="白色"
-    export function isWhite(): number {
-        return 0;
-    }
 }
