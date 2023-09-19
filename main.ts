@@ -1,3 +1,4 @@
+//% weight=30 icon="\uf1b9" color=#000080 block="KAGA:bit-Drive"
 namespace kagabitdrive {
 
     export enum direction {
@@ -58,7 +59,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId="sleep_sec"
-    //% block="動く %msec 秒"
+    //% block="%msec 秒待つ"
     //% msec.min=0
     export function SleepSec(sec: number) {
         let msec3 = sec * 1000
