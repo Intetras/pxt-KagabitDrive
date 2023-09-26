@@ -1,3 +1,7 @@
+## Kaga:bit-Drive driver
+
+This library provides a driver for Kaga:bit-Drive.
+Kagabit:Drive is Programing Car Kit for micro:bit.
 
 > このページを開く [https://intetras.github.io/pxt-kagabitdrive/](https://intetras.github.io/pxt-kagabitdrive/)
 
